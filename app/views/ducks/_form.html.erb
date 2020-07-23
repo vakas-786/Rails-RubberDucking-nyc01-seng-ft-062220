@@ -1,0 +1,14 @@
+<% if flash[:my_errors] %>
+<% flash[:my_errors].each do |error_message| %>
+    <h3><%= error_message %></h3><br>
+    <% end %>
+    <% end %>
+
+<%= form_for @ducks do |f| %>
+    <%= f.label :name %>:
+    <%= f.text_field :name %><br>
+    <%= f.label :description %>:
+    <%= f.text_field :description %><br>
+    <%= f.collection_select :student_id, @students, :id, :name %>
+    <%= f.submit %>
+<% end %>

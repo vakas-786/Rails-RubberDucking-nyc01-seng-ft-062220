@@ -1,0 +1,7 @@
+<strong><p>Name: <%= @student.name %></p></strong>
+<strong><p>Mod: <%= @student.mod %></p></strong>
+
+<strong><h1>Ducks: </h1></strong>
+<% @student.ducks.each do |duck| %> 
+    <p><%= link_to duck.name, duck_path(duck) %></p>
+<% end %>

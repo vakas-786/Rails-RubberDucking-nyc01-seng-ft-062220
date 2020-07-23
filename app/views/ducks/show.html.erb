@@ -1,0 +1,10 @@
+<h1> Ducky's Information </h1>
+
+
+    
+    
+    <h3> <%= @duck.name %><br></h3>
+    
+   <p> Ducky's Description: <%= @duck.description %></p>
+  
+   <p>Owner's Name: <%= link_to @duck.student_name , student_path(@duck.student) %></p><br>
